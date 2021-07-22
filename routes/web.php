@@ -24,3 +24,11 @@ Route::get('/hello', function () {
 Route::get('/json', function () {
     return ['foo' => 'bar'];
 });
+
+Route::get('/posts', function () {
+    return view('posts');
+});
+
+Route::get('/posts/post', function () {
+    return view('post');
+});
