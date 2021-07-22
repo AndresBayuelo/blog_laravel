@@ -9,11 +9,8 @@
 </head>
 <body>
     <article>
-        <h1><a href="/posts/post">My First Post</a></h1>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu lectus sed nibh ultricies dapibus. Nullam malesuada in massa sit amet pulvinar. Maecenas sit amet est a neque mollis egestas. Vivamus ornare urna ac lorem dictum gravida in non nisi. Phasellus rhoncus, lacus quis rutrum aliquet, ante velit blandit eros, vel scelerisque turpis tortor ut augue. Nunc pharetra magna turpis, ut rutrum velit eleifend ut. Mauris congue vel ante eget iaculis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse efficitur aliquet varius. Nulla feugiat ipsum eget urna pretium vulputate. Vestibulum in nibh quis lectus imperdiet pulvinar.
-        </p>
-        <a href="/posts">Go Back</a>
+        <?= $post; ?>
     </article>
+    <a href="/posts">Go Back</a>
 </body>
 </html>
