@@ -30,17 +30,11 @@ Route::get('/posts', function () {
 });
 
 Route::get('/posts/{post}', function ($slug) {
-    $path = __DIR__ . "/../resources/posts/{$slug}.html";
-
-    if(!file_exists($path)){
+    if(!file_exists($path = __DIR__ . "/../resources/posts/{$slug}.html")){
         return redirect('/posts');
     }
 
-    $post = cache() -> remember("post.{$slug}", 1200, function () use ($path){
-        return file_get_contents($path);
-    });
+    $post = cache() -> remember("post.{$slug}", 1200, fn() => file_get_contents($path));
 
-    return view('post',[
-        'post' => $post
-    ]);
+    return view('post',['post' => $post]);
 })->where('post', '[A-z_\-]+');
