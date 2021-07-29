@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-    <article>
-        <h1>{{ $post->title }}</h1>
-        <div>
-            {!! $post->body !!}
-        </div>
-    </article>
-    <a href="/posts">Go Back</a>
+    @yield('content')
 </body>
 </html>
